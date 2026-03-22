@@ -1,0 +1,37 @@
+# @gonzih/skills-finance
+
+AI skill suite for financial advisors and wealth managers. Four skills packaged as a single npm install.
+
+## Skills
+
+### portfolio-narrative
+Transforms raw portfolio performance data into a professional, plain-English client narrative. Contextualizes returns vs. benchmarks, explains market context, and reinforces long-term strategy. Produces a formal client letter, email version, and one-page summary.
+
+Triggers: portfolio review, portfolio narrative, performance summary, quarterly review, portfolio letter, client portfolio update
+
+### market-commentary
+Generates a professional weekly or monthly market commentary for client communications. Structured around four sections: The Macro View, What Markets Did, What It Means, What We're Watching. Produces conservative client version, growth client version, LinkedIn post, and email subject line options.
+
+Triggers: market commentary, weekly market update, market newsletter, investment update, market conditions, market outlook
+
+### financial-plan-summary
+Produces a client-facing financial plan summary — translates the technical plan into a clear story. Covers current snapshot, goal analysis with gap calculations, top 3–5 prioritized recommendations, a plain-English plan narrative, and a client/advisor action checklist.
+
+Triggers: financial plan, plan summary, financial planning, retirement plan, client plan review, planning summary, financial goals
+
+### compliance-comms-review
+Reviews client-facing financial communications against common compliance red flags (SEC, FINRA, Investment Advisers Act). Flags performance guarantees, missing disclosures, unsubstantiated superlatives, testimonial issues, predictions stated as facts, and suitability concerns. Produces flagged issue report, compliant rewrite, and disclosure checklist.
+
+Triggers: compliance review, compliance check, review communication, suitability review, regulatory check, SEC compliance, FINRA compliance
+
+## Installation
+
+```bash
+npm install @gonzih/skills-finance
+```
+
+Skills are automatically installed to your agent's skills directory on `npm install`.
+
+## License
+
+MIT — Copyright (c) 2026 Maksim Soltan
