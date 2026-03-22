@@ -1,0 +1,41 @@
+{
+  "name": "@gonzih/skills-finance",
+  "version": "1.0.0",
+  "description": "AI skill suite for financial advisors and wealth managers — portfolio narratives, market commentary, financial plan summaries, and compliance communication review.",
+  "main": "install.js",
+  "scripts": {
+    "postinstall": "node install.js",
+    "preuninstall": "node install.js uninstall"
+  },
+  "files": [
+    "skills/",
+    "install.js",
+    "llms.txt",
+    "README.md"
+  ],
+  "keywords": [
+    "claude-code",
+    "skill",
+    "agent-skill",
+    "ai-assistant",
+    "financial-advisor",
+    "wealth-management",
+    "portfolio",
+    "compliance",
+    "fintech",
+    "finance"
+  ],
+  "author": "Maksim Soltan <gonzih@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gonzih/skills-finance.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gonzih/skills-finance/issues"
+  },
+  "homepage": "https://github.com/gonzih/skills-finance#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
