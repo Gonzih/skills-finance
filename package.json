@@ -1,6 +1,6 @@
 {
   "name": "@gonzih/skills-finance",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "AI skill suite for financial advisors and wealth managers — portfolio narratives, market commentary, financial plan summaries, and compliance communication review.",
   "main": "install.js",
   "scripts": {
