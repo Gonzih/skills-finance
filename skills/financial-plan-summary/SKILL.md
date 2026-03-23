@@ -91,6 +91,23 @@ Include deadlines where applicable.
 
 ---
 
+## Live Data Sources
+
+When modeling projections and return assumptions, reference the following authoritative public datasets rather than hard-coded assumptions:
+
+- **FRED historical return series** — Use FRED series `SP500` for historical S&P 500 levels to compute realized 10-, 20-, and 30-year annualized returns as a cross-check for the long-term equity return assumption used in retirement projections.
+  - Endpoint: `https://fred.stlouisfed.org/graph/fredgraph.csv?id=SP500`
+  - Compute trailing CAGR over planning-relevant horizons to calibrate the growth rate assumption (typically 6–8% nominal for a balanced portfolio).
+
+- **Damodaran.com public datasets** (`pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histretSP.html`) — Aswath Damodaran's annual equity risk premium (ERP) and historical return tables, updated every January. Use to:
+  - Cross-check the equity risk premium assumption embedded in the plan's discount rate
+  - Pull the implied ERP for the current year as a sanity check on forward return assumptions
+  - Reference the historical arithmetic vs. geometric return distinction when explaining assumptions to clients
+
+**How to use**: When populating the Goal Analysis assumptions row (*"X% average portfolio return"*), fetch current FRED and Damodaran data to confirm the assumption is within a defensible historical range. If the plan's assumed return is an outlier vs. historical data, flag this to the advisor with suggested language for the client disclosure.
+
+---
+
 ## Example Output
 
 **Input**: David (52) and Susan Chen (49). Portfolio $1.2M (60% equities/40% bonds). Income $310K combined. Saving $36K/year to 401ks. Home equity $420K, mortgage $280K remaining. Goals: retire at 65, two kids starting college 2026 and 2028 ($80K/year each for 4 years), leave estate to kids. Conservative-moderate risk. No long-term care insurance.

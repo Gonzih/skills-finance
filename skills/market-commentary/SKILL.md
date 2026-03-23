@@ -71,6 +71,23 @@ Produce two versions of the full commentary:
 
 ---
 
+## Live Data Sources
+
+When generating market commentary, pull live macro data directly from FRED rather than relying on advisor-provided numbers for the following series:
+
+| FRED Series ID | Description | Use In Commentary |
+|---|---|---|
+| `CPIAUCSL` | CPI — All Urban Consumers, All Items | Inflation narrative in The Macro View |
+| `UNRATE` | Civilian Unemployment Rate | Labor market conditions in The Macro View |
+| `FEDFUNDS` | Effective Federal Funds Rate | Fed policy context; populate rate hold/cut/hike statements |
+| `VIXCLS` | CBOE Volatility Index (VIX) | Market sentiment in What Markets Did; flag if VIX > 20 as elevated |
+
+**Endpoint**: `https://fred.stlouisfed.org/graph/fredgraph.csv?id={SERIES_ID}` (no API key required for CSV) or the full REST API at `https://api.stlouisfed.org/fred/series/observations?series_id={SERIES_ID}&api_key={KEY}&file_type=json`.
+
+**How to use**: At commentary generation time, fetch the most recent observation for each series. Pre-populate the `[DATA POINT]` placeholders in The Macro View with actual current values. Flag to the advisor if any reading is outside historical norms (e.g., UNRATE > 5%, VIX > 30).
+
+---
+
 ## Example Output
 
 **Input**: Weekly update. Key events: Fed held rates at 5.25–5.50%. Jobs report: +187K jobs, unemployment ticked up to 3.9%. S&P 500 -0.8% for week, 10-year Treasury yield 4.38%. No major earnings. Mild flight-to-quality tone.

@@ -73,6 +73,21 @@ Produce all three versions:
 
 ---
 
+## Live Data Sources
+
+When writing portfolio narratives, enrich the market context and benchmark sections using the following live data sources:
+
+- **Alpha Vantage API** (`alphavantage.co`) — Fetch current and historical price data for portfolio holdings, sector ETFs, and benchmark indices (S&P 500, NASDAQ, Russell 2000). Use the `TIME_SERIES_DAILY_ADJUSTED` and `GLOBAL_QUOTE` endpoints to pull period returns. Requires a free API key.
+- **FRED API** (`fred.stlouisfed.org/docs/api/fred/`) — Pull benchmark return series for context:
+  - `SP500` — S&P 500 index level (FRED series ID: `SP500`)
+  - `BAMLC0A0CM` — ICE BofA US Corporate Bond index (investment-grade fixed income benchmark)
+  - `RIFSPBLPNM` — Federal funds effective rate for rate environment context
+  - Use the `/series/observations` endpoint with `observation_start` and `observation_end` for the review period.
+
+**How to use**: When the advisor provides a period (e.g., "Q1 2025"), query these APIs for the corresponding date range, compute total returns, and populate the benchmark comparison table and market context narrative automatically — reducing advisor data-gathering time.
+
+---
+
 ## Compliance Note
 
 > **IMPORTANT**: This output is a drafting template. The advisor must review all content for factual accuracy and compliance before sending to clients. Past performance disclaimer language is included in each output version but must be reviewed by a qualified compliance officer. This tool does not constitute investment advice.

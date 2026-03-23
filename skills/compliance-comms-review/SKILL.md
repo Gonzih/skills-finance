@@ -82,6 +82,25 @@ List any required disclosures that should be added before sending, with suggeste
 
 ---
 
+## Live Data Sources
+
+When performing a compliance review, augment the red flag scan with the following live regulatory data sources:
+
+- **SEC EDGAR Full-Text Search API** (`efts.sec.gov`) — Search current SEC enforcement actions, no-action letters, and regulatory guidance to identify phrases or structures that have been flagged in recent enforcement cases.
+  - Endpoint: `https://efts.sec.gov/LATEST/search-index?q={QUERY}&dateRange=custom&startdt={DATE}&enddt={DATE}&forms=IA-ADV,IA-BD`
+  - Use to check if specific language patterns (e.g., "guaranteed income," "risk-free," specific fund names) appear in recent SEC enforcement documents or exam deficiency letters.
+  - EDGAR full-text search: `https://efts.sec.gov/LATEST/search-index?q=%22guaranteed+returns%22&forms=ENFACT` to find enforcement actions involving similar language.
+
+- **FINRA BrokerCheck patterns** — When reviewing communications from broker-dealer registered representatives, note that FINRA Rule 2210 (Communications with the Public) defines specific prohibited content categories. Key patterns to match against the red flag scan:
+  - Promissory language: *"will," "guarantee," "assure," "promise"* in the context of investment returns
+  - Unsubstantiated rankings: any claim of being "top," "best," "#1," or "award-winning" without a disclosed third-party source, methodology, and date
+  - Cherry-picked performance: any performance figure without specifying the time period, gross/net of fees, and whether results are hypothetical or actual
+  - Reference FINRA's Communication Review checklist patterns for social media (Regulatory Notice 17-18) when reviewing LinkedIn posts, X/Twitter, or Facebook content
+
+**How to use**: For flagged items in Steps 2–3, query EDGAR EFTS to check if similar language has appeared in recent SEC enforcement actions. Include a note in the Issue Report if a match is found (e.g., *"Similar language flagged in SEC enforcement action [CASE ID]"*), which strengthens the case for revision before compliance submission.
+
+---
+
 ## Disclaimer
 
 > **IMPORTANT**: This skill is a drafting aid and first-pass screening tool only. It does not constitute legal or compliance advice. The output of this skill has not been reviewed by a licensed attorney or registered compliance officer. Final compliance review must be performed by a qualified compliance officer or legal counsel before any communication is distributed to clients or prospects. Rules and regulations vary by jurisdiction, registration type, and firm-specific policies.
